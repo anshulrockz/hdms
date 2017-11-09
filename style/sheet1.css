@@ -1,0 +1,172 @@
+body {
+	background-color: white;
+	font-family: 'Sedgwick Ave Display', cursive;
+	font-size:15px;
+}
+
+.outlinebox{
+	margin:10px;
+	padding:10px;
+	border:1px solid black ;
+	border-radius: 5px;
+	
+	color:black;
+	
+}
+
+.error{
+	color:red;
+}
+
+.underline{
+	border-top:1px solid #ccc; 
+	padding-top:10px;
+}
+
+.head a{
+	padding-top:20px;
+	display:block;
+	
+}
+ 
+.dropbtn {
+	background-color: #fff ;
+	color: black;
+	padding: 10px;
+	font-size: 15px;
+	border: none;
+	cursor: pointer;
+	border-radius:5em;
+}
+
+
+
+.dropdown {   
+	position: relative;
+	display: inline-block;
+	padding:20px;
+}
+
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9 ;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+
+
+.dropdown-content a {
+ 
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+
+.dropdown-content a:hover {background-color: #f1f1f1 }
+
+.dropdown:hover .dropdown-content {
+   display: block;
+}
+
+.dropdown:hover .dropbtn {
+   background-color: ;
+}
+
+
+.table{
+	min-height:50%;
+}
+
+@media screen and (max-width:563px)
+{
+	.host 	{
+		display:none;
+		width: none;
+	
+	}
+}
+
+
+.header{
+	text-align:center;
+	padding:15px;
+	border-top:2px solid #c3c3c3;
+	border-bottom:2px solid #c3c3c3;
+	background: #337AAE;
+	background: -moz-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 17%, rgba(246,41,12,1) 59%, rgba(240,47,23,1) 67%, rgba(231,56,39,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(248,80,50,1)), color-stop(17%, rgba(241,111,92,1)), color-stop(59%, rgba(246,41,12,1)), color-stop(67%, rgba(240,47,23,1)), color-stop(100%, rgba(231,56,39,1)));
+	background: -webkit-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 17%, rgba(246,41,12,1) 59%, rgba(240,47,23,1) 67%, rgba(231,56,39,1) 100%);
+	background: -o-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 17%, rgba(246,41,12,1) 59%, rgba(240,47,23,1) 67%, rgba(231,56,39,1) 100%);
+	background: -ms-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 17%, rgba(246,41,12,1) 59%, rgba(240,47,23,1) 67%, rgba(231,56,39,1) 100%);
+	background: linear-gradient(to right, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 17%, rgba(246,41,12,1) 59%, rgba(240,47,23,1) 67%, rgba(231,56,39,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#e73827', GradientType=1 );
+	background: #337AAE; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left, #fff , #337AAE); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(right, #fff, #337AAE); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(right, #fff, #337AAE); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to right, #fff, #337AAE); /* Standard syntax */
+}
+				
+.dashbox{
+	width: 250px;
+    height: 300px;
+	padding:10px;
+	margin:5px;
+    border: 1px solid #c3c3c3;
+    border-radius: 5px;
+    display: grid;
+    flex-wrap: wrap;
+    align-content: center;
+	text-align: center;
+	box-sizing:border-box;
+}
+
+.dashbox:hover{
+cursor:pointer;
+-webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.36);
+-moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.36);
+box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.36);
+text-decoration:none;
+}
+@media screen and (max-width:768px)
+{
+	.dashbox{
+	width: 48%;
+	
+	}
+}
+@media screen and (max-width:540px)
+{
+	.dashbox{
+	width: 100%;
+	margin:5px 10px;
+	
+	}
+}
+.infobox{
+	margin:10px;
+	padding:auto;
+	border-radius: 5px;
+	border-color:;
+	border:1px solid black ;
+	color:black;
+	float:left;
+}
+
+
+.numicon{
+	margin:0 auto;
+	text-align:center;
+	border-radius:10em;
+	width:200px;
+	height:200px;
+	font-size:4em;
+    align-content: center;
+	display:grid;
+}
+
