@@ -32,7 +32,7 @@ if($count1>0){
 
 else{
 	$sql="INSERT INTO `hosting`(`id_hosting`, `hosting_name`, `server_category`, `server_type`, `server_space`, `reg_date_hosting`, `validity`, `username_hosting`, `password_hosting`, `email_hosting`, `password_email_hosting`, `cpanel_hosting`, `cpanel_password_hosting`, `info`, `client_id`, `domain_id`, `provider_id`, `reg_hosting`) VALUES 
-								('', 				'$text1', 		'$text3', 		'$text5', 			'$text6', 		'$text7', 	'$text8', 	'$username', 		'$password',			'$email', 		'$password_email',		'$cpanelUsername','$cpanelPassword',		'$text11','$text2',		'$text4',	'$text9',		now())";
+								('','$text1','$text3','$text5','$text6','$text7','$text8','$username', 		'$password','$email','$password_email','$cpanelUsername','$cpanelPassword',		'$text11','$text2',		'$text4',	'$text9',		now())";
 	$query=mysqli_query($connection, $sql);
 	header("Refresh:0; url=add-hosting.php?action=success");
 }

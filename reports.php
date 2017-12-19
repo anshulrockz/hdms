@@ -6,14 +6,14 @@ if(!$connection){
 	die("connectionn err:".mysqli_connect_error());
 }
 	
-$queryDomain=mysqli_query($connection,"SELECT domains.*, clients.client_name FROM domains LEFT JOIN clients ON domains.client_id=clients.id WHERE validity BETWEEN (CURRENT_DATE() - INTERVAL 1 MONTH) AND CURRENT_DATE()");
+$queryDomain=mysqli_query($connection,"SELECT domains.*, clients.client_name FROM domains LEFT JOIN clients ON domains.client_id=clients.id WHERE domains.validity < DATE_ADD(NOW(), INTERVAL 1 MONTH) ORDER BY domains.validity");
 $countDomain=mysqli_num_rows($queryDomain);
 
 
 $queryHosting=mysqli_query($connection,"SELECT hosting.*, clients.client_name, domains.domain_name FROM hosting 
 LEFT JOIN clients ON hosting.client_id=clients.id
 LEFT JOIN domains	ON hosting.domain_id = domains.id_domain 
-WHERE hosting.validity BETWEEN (CURRENT_DATE() - INTERVAL 1 MONTH) AND CURRENT_DATE()");
+WHERE hosting.validity < DATE_ADD(NOW(), INTERVAL 1 MONTH) ORDER BY hosting.validity");
 
 $countHosting=mysqli_num_rows($queryHosting);
 	
@@ -207,7 +207,7 @@ $countHosting=mysqli_num_rows($queryHosting);
 								?>
 								<tr>
 									<td><?php echo $i;?></td>
-									<td><?php echo $row["domain_name"];?></td>
+									<td><?php echo $row["domain_id"];?></td>
 									<td><?php echo $row["hosting_name"];?></td>
 									<td><?php echo $row["client_name"];?></td>
 									<td><?php

@@ -97,7 +97,7 @@ $result=mysqli_fetch_assoc($query1);
 					</div>
 					
 					<div class="row">
-						<table class="col-md-6 table table-responsive" >
+						<table class="col-md-6 table table-bordered" >
 							<tbody>
 								<tr>
 									<th>Name:</th>
@@ -157,10 +157,12 @@ $result=mysqli_fetch_assoc($query1);
 							
 						</div>
 					</div>
-					<div class="infobox">
-						<h2>Domain Information<div class="badge"><?php echo $i; $i++;?></div></h2>
-						<table class="col-md-12 table table-responsive" >
+					<div class="col-sm-11 col-md-4">
+						<table class=" table table-bordered">
 						<tbody>
+							<tr>
+								<th colspan="2">Domain Information<div class="badge"><?php echo $i; $i++;?></div></th>
+							</tr>
 							<tr>
 								<th>Domain:</th>
 								<td><?php echo $result2['domain_name']; ?></td>
@@ -190,7 +192,8 @@ $result=mysqli_fetch_assoc($query1);
 								<?php
 									} 
 								}	
-								$sql3="SELECT * FROM hosting WHERE client_id='$id'";
+								$sql3="SELECT * FROM hosting LEFT 
+								JOIN clients ON hosting.client_id=clients.id WHERE client_id='$id'";
 								$query3=mysqli_query($connection,$sql3);
 								$count3=mysqli_num_rows($query3);
 								$i=1;
@@ -198,25 +201,45 @@ $result=mysqli_fetch_assoc($query1);
 								while($result3=mysqli_fetch_assoc($query3)){
 								?>	
 					<div class="row">
-						<div class="col-md-6 col-auto mr-auto text-left">
+						<div class="col-md-4 col-auto mr-auto text-left">
 							
 						</div>
 					</div>
-							<div class="infobox">
-								<h2>Hosting Information<div class="badge"><?php echo $i; $i++;?></div></h2>
-								<table class="col-md-12 table table-responsive ">
+							<div class="col-sm-11 col-md-4">
+								<table class=" table table-bordered ">
 									<tbody>
+										<tr>
+											<th colspan="2">Hosting Information<div class="badge"><?php echo $i; $i++;?></div></th>
+										</tr>
 										<tr>
 											<th>Hosting:</th>
 											<td><?php echo $result3['hosting_name']; ?></td>
 										</tr>
 										<tr>
 											<th>Server type:</th>
-											<td><?php echo $result3['server_type']; ?></td>
+											<td>
+												<?php 
+												$temp4=$result3['server_type']; 
+												$query4=mysqli_query($connection,"SELECT * FROM host_type WHERE id_type='$temp4'");
+												$result4=mysqli_fetch_array($query4);
+												echo $result4["name"];
+												?>
+											</td>
 										</tr>
 										<tr>
 											<th>Server space:</th>
-											<td><?php echo $result3['server_space']; ?></td>
+											<td>
+												<?php 
+												$temp5=$result3['provider_id']; 
+												$query5=mysqli_query($connection,"SELECT * FROM providers WHERE id='$temp5'");
+												$result5=mysqli_fetch_array($query5);
+												echo $result5["name"];
+												?>
+											</td>
+										</tr>
+										<tr>
+											<th>Email ID:</th>
+											<td><?php echo $result3['email_hosting']; ?></td>
 										</tr>
 										<tr>
 											<th>Registration date:</th>

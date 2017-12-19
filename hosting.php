@@ -98,6 +98,7 @@ include 'php/extra.php';
 								<thead class="thead-default">
 									<tr>
 										<th>#</th>
+										<th>Domain </th>
 										<th>Hosting Plan </th>
 										<th>Client Name </th>
 										<th>Server Type </th>
@@ -114,6 +115,7 @@ include 'php/extra.php';
 								?>
 								<tr>
 									<td><?php echo $i;?></td>
+									<td><?php echo $row["domain_id"];;?></td>
 									<td><?php echo $row["hosting_name"];?></td>
 									<td><?php echo $row["client_name"];?></td>
 									<td><?php

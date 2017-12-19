@@ -78,10 +78,6 @@ body {
 }
 
 
-.table{
-	min-height:50%;
-}
-
 @media screen and (max-width:563px)
 {
 	.host 	{

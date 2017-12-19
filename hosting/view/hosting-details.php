@@ -93,6 +93,10 @@ include '../../php/extra.php';
 						<table class="col-md-12 table table-responsive" style="width:80%">
 						<tbody>
 							<tr>
+								<th>Domain:</th>
+								<td><?php echo $result['domain_id']; ?></td>
+							</tr>
+							<tr>
 								<th>Hosting:</th>
 								<td><?php echo $result['hosting_name']; ?></td>
 							</tr>

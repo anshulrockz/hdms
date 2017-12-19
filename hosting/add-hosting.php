@@ -213,7 +213,7 @@ include '../php/extra.php';
 									</div>
 									<div class="col-md-6">
 										<label for="validationDefault01">Password<span class="span-danger">*</span></label>
-										<input type="password" name="text6" class="form-control" id="validationDefault01" autocomplete="off" placeholder="Please provide password" required>
+										<input type="text" name="text6" class="form-control" id="validationDefault01" autocomplete="off" placeholder="Please provide password" required>
 									</div>
 								</div>
 								<div class="row">
@@ -223,7 +223,7 @@ include '../php/extra.php';
 									</div>
 									<div class="col-md-6">
 										<label for="validationDefault01">Password of Email ID<span class="span-danger">*</span></label>
-										<input type="password" name="text8" class="form-control" id="validationDefault01" placeholder="Please provide email password" required>
+										<input type="text" name="text8" class="form-control" id="validationDefault01" placeholder="Please provide email password" required>
 									</div>
 								</div>
 								<div class="row">
@@ -233,7 +233,7 @@ include '../php/extra.php';
 									</div>
 									<div class="col-md-6">
 										<label for="validationDefault01">Cpannel password<span class="span-danger">*</span></label>
-										<input type="password" name="text10" class="form-control" id="validationDefault01" placeholder="Please provide cpanel password" required>
+										<input type="text" name="text10" class="form-control" id="validationDefault01" placeholder="Please provide cpanel password" required>
 									</div>
 								</div>
 								<div class="row">
